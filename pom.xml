@@ -14,12 +14,12 @@
     <groupId>com.czh.dubbo</groupId>
     <artifactId>springboot-dubbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <modules>
         <module>dubbo-api</module>
         <module>dubbo-consumer</module>
         <module>dubbo-provider</module>
+        <module>TestMain</module>
     </modules>
 
     <name>springboot-dubbo</name>

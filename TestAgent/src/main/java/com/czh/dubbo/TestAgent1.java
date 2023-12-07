@@ -1,4 +1,4 @@
-package com.trista.dubbo;
+package com.czh.dubbo;
 
 import java.lang.instrument.Instrumentation;
 
@@ -6,7 +6,7 @@ import java.lang.instrument.Instrumentation;
  * Hello world!
  *
  */
-public class TestAgent
+public class TestAgent1
 {
     public static void premain( String args, Instrumentation inst )
     {

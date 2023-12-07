@@ -5,11 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>com.trista.dubbo</groupId>
-    <artifactId>TestAgent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+<!--    <parent>-->
+<!--        <groupId>com.czh.dubbo</groupId>-->
+<!--        <artifactId>springboot-dubbo</artifactId>-->
+<!--        <version>0.0.1-SNAPSHOT</version>-->
+<!--    </parent>-->
 
     <name>TestAgent</name>
+
+    <groupId>com.czh.dubbo</groupId>
+    <artifactId>TestAgent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -19,12 +25,32 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>local-repo</id>-->
+<!--            <url>file:/Users/tosavana/.m2/repository/com/czh/dubbo/TestMain/0.0.1-SNAPSHOT/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--                <checksumPolicy>ignore</checksumPolicy>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--                <checksumPolicy>ignore</checksumPolicy>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.czh.dubbo</groupId>
+            <artifactId>TestMain</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -54,7 +80,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Premain-Class>com.trista.dubbo.TestAgent</Premain-Class>
+                                        <Premain-Class>com.czh.dubbo.TestAgent</Premain-Class>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
@@ -81,7 +107,8 @@
                         </manifest>
                         <!-- 将 premain-class 配置项设置为 com.xxx.TestAgent -->
                         <manifestEntries>
-                            <Premain-Class>com.trista.dubbo.TestAgent</Premain-Class>
+                            <Premain-Class>com.czh.dubbo.TestAgent</Premain-Class>
+                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
                     </archive>
                 </configuration>
@@ -99,4 +126,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
